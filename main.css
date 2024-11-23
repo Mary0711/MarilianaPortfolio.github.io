@@ -1,0 +1,54 @@
+* {
+  color: whitesmoke;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.slide {
+  background-image: url(images/test1.jpg);
+  background-color: rgb(88, 88, 93);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 568px;
+}
+/*
+test1, 8
+
+test5, test2, test6, 4, 8, 10, 9 si se posicionan bien
+*/
+
+.start {
+  text-align: center;
+}
+
+.start h1 {
+  font-size: 80px;
+}
+
+.start button {
+  border-radius: 8px;
+  height: 10%;
+  width: 15%;
+  font-size: 14px;
+  background-color: rgb(123, 43, 11);
+  border: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 700px) {
+  h1 {
+    color: green;
+  }
+  .start button {
+    height: 12%;
+    width: 25%;
+  }
+}
