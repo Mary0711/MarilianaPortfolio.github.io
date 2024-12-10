@@ -4,15 +4,149 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <title>Mariliana Web Portfolio</title>
   </head>
   <body>
-    <div class="slide">
+    <div class="main">
       <div class="start">
-        <h1>Hello! I'm</h1>
-        <h1>Mariliana</h1>
-        <button>Get a look at my portfolio</button>
+        <h1>
+          Hello! I am <br />
+          Mariliana
+        </h1>
+        <h3>You can contact me by email or text message</h3>
+        <div class="contact">
+          <i class="bx bxs-envelope"> marilianamtz@gmail.com</i>
+          <i class="bx bxs-message-dots">(939) 247 2986</i>
+        </div>
+      </div>
+
+      <div>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
       </div>
     </div>
+
+    <div class="information">
+      <div class="about">
+        <h1>About Me</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque iusto
+          quidem laboriosam quaerat cum. Maiores voluptatibus, ipsa animi nihil
+          hic, temporibus deserunt dolorum, incidunt nulla distinctio nostrum
+          soluta eius repellendus.
+        </p>
+      </div>
+      <div class="more">
+        <div class="rectangle academic">
+          <h1>Education</h1>
+          <p>
+            <b>Bachelor's Degree in Computer Science</b> <br />
+            <i>University of Puerto Rico at Arecibo</i>
+          </p>
+          <h3>Important Courses</h3>
+          <div class="courses">
+            <li>Minor in Web Development</li>
+            <li>Software Development</li>
+            <li>Websites with PHP</li>
+            <li>Advanced web with Javascript</li>
+            <li>Introduction to Database Design</li>
+            <li>Visual Programming with C# and Visual Basic</li>
+          </div>
+        </div>
+
+        <!-- <div class="rectangle skills">
+            <h1>Research</h1>
+            <li>
+              <b>Summer Research at Argonne National Laboratory</b> using
+              augmented virtual reality and robotic arms
+            </li>
+            <br />
+            <li>
+              <b>Semester Research about Pattern matching</b> of LINE-1 in human
+              genomes using alignment or mapping algorithms.
+            </li>
+          </div>-->
+        <div class="rectangle knowledge">
+          <h1>Programming Languages</h1>
+          <div class="languages">
+            <img
+              src="/images/python_logo.png"
+              alt=""
+              data-filter="javascript"
+            />
+            <img src="/images/c++_logo.png" alt="" data-filter="javascript" />
+            <img src="/images/javascript_logo.png" alt="" data-filter="web" />
+            <img src="/images/html_logo.png" alt="" data-filter="web" />
+            <img src="/images/css_logo.png" alt="" data-filter="python" />
+            <img src="/images/java_logo.png" alt="" data-filter="python" />
+            <img src="/images/php_logo.png" alt="" data-filter="python" />
+            <img src="/images/bootstrap_logo.png" alt="" data-filter="python" />
+          </div>
+        </div>
+      </div>
+      <div class="projects">
+        <section class="filter-menu">
+          <h1>Projects</h1>
+
+          <ul class="ul">
+            <li class="current">All Proyects</li>
+            <li>Javascript</li>
+            <li>Web</li>
+            <li>Python</li>
+          </ul>
+          <div class="items">
+            <img src="/images/working1.jpeg" alt="" data-filter="javascript" />
+            <a href="/project_list.html" target="_blank">
+              <img
+                src="/images/working2.jpeg"
+                alt=""
+                data-filter="javascript"
+              />
+            </a>
+            <img src="#" alt="" data-filter="web" />
+            <img src="#" alt="" data-filter="web" />
+            <img src="#" alt="" data-filter="python" />
+            <img src="#" alt="" data-filter="python" />
+          </div>
+        </section>
+        <script>
+          const liproduct = document.querySelectorAll("ul li");
+          const img = document.querySelectorAll(".items img");
+
+          liproduct.forEach((li) => {
+            li.onclick = function () {
+              //active
+              liproduct.forEach((li) => {
+                li.className = "";
+              });
+              li.className = "current";
+              //filter
+              const value = li.textContent;
+              img.forEach((img) => {
+                img.style.display = "none";
+                if (
+                  img.getAttribute("data-filter") == value.toLowerCase() ||
+                  value == "All Proyects"
+                ) {
+                  img.style.display = "block";
+                }
+              });
+            };
+          });
+        </script>
+      </div>
+      <footer></footer>
+    </div>
   </body>
+  <script>
+    ScrollReveal().reveal(".rectangle");
+  </script>
 </html>
